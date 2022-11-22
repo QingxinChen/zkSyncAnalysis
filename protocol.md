@@ -157,3 +157,14 @@ todo：User transaction干嘛用的？"amount": "12340000000000"怎么转成amou
 
 4.4 Withdraw (Partial Exit)
 从Rollup账户中提取资金到指定以太坊地址的适当余额。
+
+4.7 Deposit
+将以太坊账户的资金存入指定的Rollup账户。存款作为优先操作开始——用户调用合约方法depositERC20来存放以太坊，或depositERC20来存放ERC-20代币。之后，操作符在块中包含此操作。如果需要，将在帐户树中创建新帐户。
+operator审查
+operator可能出于某种原因没有在块中包含此操作。然后，通过智能合约上设置的以太坊区块数量，启动exodus mode。它将允许收件人帐户(即与msg。sender == Deposit.to)从zkSync合同中提取资金。
+
+4.8 Full exit
+如果用户认为他的交易被验证者审查，他可以请求该操作来提取资金。
+它作为优先级操作开始——用户调用合约方法fullExit。之后，操作者在块中包含此操作。
+
+如果服务器端出现了错误，那么完整退出操作将包含在pubdata中数量为0(0)的块中。
