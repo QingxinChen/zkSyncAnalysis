@@ -1,6 +1,6 @@
-1、术语表
-L1: layer-1区块链(以太坊)
-Rollup: layer-2区块链(zkSync)
+1、术语表  
+L1: layer-1区块链(以太坊)  
+Rollup: layer-2区块链(zkSync)  
 Owner:控制L2中某些资产的用户。
 Operator:操作Rollup的实体。
 Eventually:在有限的时间内发生。
