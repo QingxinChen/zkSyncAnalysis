@@ -1,23 +1,23 @@
 1、术语表  
 L1: layer-1区块链(以太坊)  
 Rollup: layer-2区块链(zkSync)  
-Owner:控制L2中某些资产的用户。
-Operator:操作Rollup的实体。
-Eventually:在有限的时间内发生。
-Assets in rollup:由所有者控制的L2智能合约中的资产。
-Rollup key:所有者的私钥，用于控制存放的资产。
-Rescue signature:使用所有者的私钥对所有者的消息进行签名的结果，该结果用于Rollup内部交易。
+Owner:控制L2中某些资产的用户。  
+Operator:操作Rollup的实体。  
+Eventually:在有限的时间内发生。  
+Assets in rollup:由所有者控制的L2智能合约中的资产。  
+Rollup key:所有者的私钥，用于控制存放的资产。  
+Rescue signature:使用所有者的私钥对所有者的消息进行签名的结果，该结果用于Rollup内部交易。  
 
-2、设计
-2.1 概述
-zkSync为ETH和ERC20可替换令牌传输实现了ZK rollup协议(以下简称“rollup”)。
+2、设计  
+2.1 概述  
+zkSync为ETH和ERC20可替换令牌传输实现了ZK rollup协议(以下简称“rollup”)。  
 
-总体上rollup工作流程如下:
+总体上rollup工作流程如下:  
 
-  用户可以通过从L1存储资产或从其他所有者接收转移来成为rollup中的所有者。
-  所有者可以互相转让资产。
-  所有者可以将其控制下的资产提取到L1地址。
-Rollup操作需要操作员的帮助，操作员将交易滚到一起，计算正确状态转换的零知识证明，并通过与Rollup合约交互影响状态转换。
+  用户可以通过从L1存储资产或从其他所有者接收转移来成为rollup中的所有者。  
+  所有者可以互相转让资产。  
+  所有者可以将其控制下的资产提取到L1地址。  
+Rollup操作需要操作员的帮助，操作员将交易滚到一起，计算正确状态转换的零知识证明，并通过与Rollup合约交互影响状态转换。  
 
 2.2 假设
 密码学的假设:
